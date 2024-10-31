@@ -1,3 +1,7 @@
+.pink {
+    color: rgb(255, 83, 123);
+}
+
 .tomato {
     color: hsl(4, 100%, 67%);
 }
@@ -21,13 +25,13 @@
 
 @font-face {
     font-family: 'Roboto Regular';
-    src: url(./assets/fonts/Roboto-Regular.ttf);
+    src: url(../fonts/Roboto-Regular.ttf);
     font-size: 12pt;
 }
 
 @font-face {
     font-family: 'Roboto Bold';
-    src: url(./assets/fonts/Roboto-Bold.ttf);
+    src: url(../fonts/Roboto-Bold.ttf);
     font-size: 12pt;
 }
 
@@ -43,7 +47,6 @@ html {
 
 body {
     font-family: 'Roboto Regular';
-    line-height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,23 +56,32 @@ body {
 }
 
 main {
-    position: absolute;
-    top: 0;
+    margin-top: 0;
+    line-height: 1.5rem;
     background-color: white;
-    max-width: 75vw;
-    width: 375px;
+    width: 100vw;
+    height: 100vh;
     font-weight: 500;
     border-radius: 1rem;
-    box-shadow: .1rem .1rem 1rem rgba(255, 255, 255, 0.295);
+    box-shadow: .1rem .1rem 1rem rgb(0, 0, 0);
+    transition: box-shadow .5s;
 }
 
+main:hover {
+    box-shadow: 13px 13px 20px hsla(0, 0%, 0%, 0.849);
+    transition: box-shadow .3s;
+}
+
+
+
 #banner {
+    width: 100vw;
     margin-bottom: 1rem;
 }
 
 section,
 h1 {
-    margin: 1.5rem 2rem 2.2rem 1.5rem;
+    margin: 1.7rem 1rem 2.2rem 1.4rem;
 }
 
 p {
@@ -88,7 +100,7 @@ li {
 }
 
 li::before {
-    content: url(./assets/images/icon-list.svg);
+    content: url(../img/icon-list.svg);
     position: absolute;
     left: 0;
     top: 0%;
@@ -100,19 +112,22 @@ h1 {
 }
 
 form {
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
     font-weight: 600;
     font-size: .8rem;
-    margin-top: 2.3rem;
+    margin: 2.3rem 1.5rem 2rem 0;
 }
 
 input {
     font-size: 1rem;
+    font-weight: 600;
     border-radius: .5rem;
     border: 1px solid rgba(0, 0, 0, 0.233);
     padding: 1.1rem;
     margin: .3rem 0 1rem 0;
     width: 100%;
-
 }
 
 input::placeholder {
@@ -121,12 +136,21 @@ input::placeholder {
 }
 
 button {
+    border: none;
     font-size: .9rem;
     font-weight: 600;
-    color: white;
     background-color: hsl(234, 29%, 20%);
+    color: white;
     width: 100%;
     border-radius: .5rem;
-    padding: 1.1rem;
-    margin-top: .5rem;
+    padding: 1.3rem;
+    margin: .5rem 0 .4rem 0;
+    transition: box-shadow .2s ease-in;
+}
+
+button:hover {
+    background-image: linear-gradient(45deg, rgb(255, 83, 123), hsl(4, 100%, 67%));
+    box-shadow: 1px 6px 20px hsla(4, 100%, 67%, 0.514);
+    cursor: pointer;
+    transition: box-shadow .4s ease;
 }
