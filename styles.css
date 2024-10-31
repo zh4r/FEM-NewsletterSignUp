@@ -1,0 +1,132 @@
+.tomato {
+    color: hsl(4, 100%, 67%);
+}
+
+.darkSlateGrey {
+    color: hsl(234, 29%, 20%);
+}
+
+.charcoalGrey {
+    color: hsl(235, 18%, 26%);
+}
+
+.grey {
+    color: hsl(231, 7%, 60%);
+}
+
+.white {
+    color: hsl(0, 0%, 100%);
+}
+
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+    font-size: 12pt;
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-size: 12pt;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: hsl(235, 18%, 26%);
+}
+
+body {
+    font-family: 'Roboto Regular';
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    max-width: 75vw;
+    width: 375px;
+    font-weight: 500;
+    border-radius: 1rem;
+    box-shadow: .1rem .1rem 1rem rgba(255, 255, 255, 0.295);
+}
+
+#banner {
+    margin-bottom: 1rem;
+}
+
+section,
+h1 {
+    margin: 1.5rem 2rem 2.2rem 1.5rem;
+}
+
+p {
+    margin: 1.6rem 0 1.5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 2.4rem;
+    margin-bottom: .6rem;
+}
+
+li::before {
+    content: url(./assets/images/icon-list.svg);
+    position: absolute;
+    left: 0;
+    top: 0%;
+}
+
+h1 {
+    font-family: 'Roboto Bold';
+    font-size: 2.5rem;
+}
+
+form {
+    font-weight: 600;
+    font-size: .8rem;
+    margin-top: 2.3rem;
+}
+
+input {
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 1.1rem;
+    margin: .3rem 0 1rem 0;
+    width: 100%;
+
+}
+
+input::placeholder {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.267);
+}
+
+button {
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    width: 100%;
+    border-radius: .5rem;
+    padding: 1.1rem;
+    margin-top: .5rem;
+}
