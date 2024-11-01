@@ -17,20 +17,20 @@
 </head>
 
 <body>
-    <main>
+    <main id="thanks">
         <header>
-            <img src="/img/icon-success.svg" alt="Checkmark image">
+            <img src="/img/icon-success.svg" alt="Checkmark image" id="icon-success">
             <h1>Thanks for subscribing!</h1>
         </header>
         <section>
             <p>
-                A confirmation email has been sent to ash@loremcompany.com.
+                A confirmation email has been sent to <strong>ash@loremcompany.com</strong>.
                 Please open it and click the button inside to confirm your subscription.
-            <form action="/" method="get">
-                <button id="dismiss">Dismiss message</button>
-            </form>
             </p>
         </section>
+        <form action="/" method="get" id="dismiss">
+            <button>Dismiss message</button>
+        </form>
     </main>
 
 </body>

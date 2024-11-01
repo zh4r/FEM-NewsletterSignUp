@@ -55,6 +55,10 @@ body {
     width: 100vw;
 }
 
+header {
+    line-height: 2.5rem;
+}
+
 main {
     margin-top: 0;
     line-height: 1.5rem;
@@ -72,16 +76,22 @@ main:hover {
     transition: box-shadow .3s;
 }
 
-
-
 #banner {
     width: 100vw;
     margin-bottom: 1rem;
 }
 
+#icon-success {
+    margin: 1.7rem 0 1rem 1.4rem;
+}
+
+#thanks {
+    padding: 8rem 0 0 0;
+}
+
 section,
 h1 {
-    margin: 1.7rem 1rem 2.2rem 1.4rem;
+    margin: .5rem 1rem 1.5rem 1.4rem;
 }
 
 p {
@@ -117,7 +127,7 @@ form {
     bottom: 0;
     font-weight: 600;
     font-size: .8rem;
-    margin: 2.3rem 1.5rem 2rem 0;
+    margin: 0 1.5rem 2.5rem 0;
 }
 
 input {
@@ -153,4 +163,8 @@ button:hover {
     box-shadow: 1px 6px 20px hsla(4, 100%, 67%, 0.514);
     cursor: pointer;
     transition: box-shadow .4s ease;
+}
+
+#dismiss {
+
 }
