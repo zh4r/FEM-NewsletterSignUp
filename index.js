@@ -2,7 +2,7 @@
 
 
 
-const mailInput = document.getElementById('email').value;
+const mailInput = document.getElementById('email');
 const mailErr = document.getElementById('email-error');
 
 function validateEmail(mailInput) {
