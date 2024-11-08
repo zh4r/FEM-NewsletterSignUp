@@ -1,31 +1,17 @@
-// The browser seems to be validating the mail by itself - have to check how to access this, and use it for a simpler function.
+function validateEmail() {
+    const mailErr = document.getElementById('email-error');
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const button = document.querySelector('button')
 
-
-
-const mailInput = document.getElementById('email');
-const mailErr = document.getElementById('email-error');
-
-function validateEmail(mailInput) {
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // console.log(mailInput)
-    if (!mailInput.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-        mailErr.innerHTML = "Enter Valid mail";
-        return false;
-    };
-
-    mailErr.HTML = "";
-    return true;
-    // return emailRegex.test(mailInput);
+    if (!emailPattern.test(email)) {
+        emailInput.classList.add('invalidMail');
+        mailErr.style.display = 'block';
+        button.disabled = true;
+    } else {
+        emailInput.classList.remove('invalidMail');
+        mailErr.style.display = 'none';
+        button.disabled = false;
+    }
 }
-
-// mailInput.addEventListener
-
-// oninput = (event) => {};
-
-const works = () => console.log('working');
-
-works();
-
-//  https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
-
-
