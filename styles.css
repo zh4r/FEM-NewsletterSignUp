@@ -194,6 +194,45 @@ button:hover {
         justify-content: space-between;
     }
 
+    main#thanks {
+        /* display: flex; */
+        /* padding: 0; */
+        width: 30.2rem;
+        height: 30.2rem;
+        padding: 1rem 1rem 2rem 4rem;
+        border-radius: 2rem;
+
+        h1,
+        section {
+            padding: 0;
+            margin: 0;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 3.4rem;
+            line-height: 3.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 1.2rem 0 1.5rem 0;
+        }
+
+        form {
+            margin: 0;
+
+            button {
+                padding: 1.2rem;
+            }
+        }
+
+        #icon-success {
+            margin: 1.5rem 0 1.8rem 0;
+        }
+
+    }
+
     #banner {
         display: inline;
         float: right;
@@ -211,10 +250,11 @@ button:hover {
     }
 
     section {
+        font-size: 1rem;
         display: inline;
         float: left;
         width: 40%;
-        margin: 0 2rem 2rem 4rem;
+        margin: 0 .2rem 2rem 4rem;
     }
 
     form {
@@ -224,18 +264,35 @@ button:hover {
         width: 100%;
         margin-top: 1.5rem;
     }
+
 }
 
-@media (min-width: 550px) and (max-width: 1159px) {
+@media (min-width: 550px) and (max-width: 1160px) {
 
-    main,
-    #banner {
-        width: 30rem;
+    main {
+        width: 24rem;
+        padding-right: 2rem;
+        
+        #banner {
+            width: 24rem;
+        }
+    }
+
+    main#thanks {
+        width: 24rem;
+
+        h1 {
+            margin: 1rem 0 0 1.5rem;
+            width: 80%;
+        }
+
+        #dismiss {
+            width: 21rem;
+        }
     }
 
     form {
-        width: 25rem;
+        width: 22rem;
     }
-
 
 }
