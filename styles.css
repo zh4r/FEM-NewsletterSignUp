@@ -164,6 +164,9 @@ input::placeholder {
     background-color: hsla(4, 100%, 67%, 0.163);
 }
 
+.hide {
+    display: none;
+}
 
 button {
     border: none;
@@ -195,8 +198,7 @@ button:hover {
     }
 
     main#thanks {
-        /* display: flex; */
-        /* padding: 0; */
+
         width: 30.2rem;
         height: 30.2rem;
         padding: 1rem 1rem 2rem 4rem;
@@ -292,7 +294,7 @@ button:hover {
     }
 
     form {
-        width: 22rem;
+        width: 21rem;
     }
 
 }
