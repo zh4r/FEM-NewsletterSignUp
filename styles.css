@@ -151,11 +151,18 @@ input {
     padding: 1.2rem;
     margin: .3rem 0 1rem 0;
     width: 100%;
+    cursor: pointer;
 }
 
 input::placeholder {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.267);
+}
+
+input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    box-shadow: 1px 6px 20px hsla(5, 51%, 14%, 0.2);
+    
 }
 
 .invalidMail {

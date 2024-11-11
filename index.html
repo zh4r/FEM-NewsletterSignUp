@@ -27,7 +27,7 @@
                 <li>Measuring to ensure updates are a success</li>
                 <li>And much more!</li>
             </ul>
-            <form onsubmit="hideMain()">
+            <form>
                 <label for="email">Email address
                     <span id="email-error">Valid email required</span></label>
                 <input type="email" name="email" id="email" placeholder="email@company.com" onkeyup="validateEmail()" required>
@@ -44,7 +44,7 @@
                 A confirmation email has been sent to <b><span id="mailSpan"></span></b>.
                 Please open it and click the button inside to confirm your subscription.
             </p>
-            <form onsubmit="hideThanks()" id="dismiss">
+            <form id="dismiss">
                 <button>Dismiss message</button>
             </form>
         </section>
