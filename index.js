@@ -1,9 +1,10 @@
-const thanks = document.getElementById('thanks');
 const main = document.querySelector('main');
+const body = document.querySelector('body');
 const button = document.querySelector('button');
 const emailInput = document.getElementById('email');
+const submittedMain = document.getElementById('submittedMain');
 let mailSpan = document.getElementById('mailSpan');
-thanks.classList.add('hide');
+submittedMain.classList.add('hide');
 
 function validateEmail() {
     const email = emailInput.value;
@@ -23,7 +24,7 @@ function validateEmail() {
 
 function toggleHide() {
     const email = document.getElementById('email').value;
-    thanks.classList.toggle('hide');
+    submittedMain.classList.toggle('hide');
     main.classList.toggle('hide');
     mailSpan.textContent = email;
 };
@@ -36,11 +37,10 @@ button.addEventListener('click', (event) => {
     }
 });
 
-    //TODO: Dismiss button doesn't work with enter.
-button.addEventListener('keypress', (event) => {
-    event.preventDefault();
-    if (event.key === "Enter") {
+body.addEventListener('keydown', function(event) {
+    const dismissBtn = document.getElementById('dismissBtn');
+    if (!submittedMain.classList.contains('hide') && event.key === "Enter") {
         event.preventDefault();
-        document.getElementById("dismiss").click();
+        dismissBtn.click();
     }
 });

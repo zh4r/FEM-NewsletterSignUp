@@ -1,28 +1,3 @@
-.pink {
-    color: rgb(255, 83, 123);
-}
-
-.tomato {
-    color: hsl(4, 100%, 67%);
-}
-
-.darkSlateGrey {
-    color: hsl(234, 29%, 20%);
-}
-
-.charcoalGrey {
-    color: hsl(235, 18%, 26%);
-}
-
-.grey {
-    color: hsl(231, 7%, 60%);
-}
-
-.white {
-    color: hsl(0, 0%, 100%);
-}
-
-
 @font-face {
     font-family: 'Roboto Regular';
     src: url(./assets/fonts/Roboto-Regular.ttf);
@@ -30,8 +5,8 @@
 }
 
 @font-face {
-    font-family: 'Roboto Bold';
     src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-family: 'Roboto Bold';
     font-size: 12pt;
 }
 
@@ -46,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Regular';
+    font-family: 'Roboto Regular', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +29,6 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
 
 main {
     margin-top: 0;
@@ -73,6 +47,20 @@ main:hover {
     transition: box-shadow .3s;
 }
 
+.hide {
+    display: none;
+}
+
+.invalidMail {
+    color: rgb(219, 111, 109);
+    border: 1px solid rgb(219, 111, 109);
+    background-color: hsla(4, 100%, 67%, 0.163);
+}
+
+#submittedMain {
+    padding: 8rem 0 0 0;
+}
+
 #banner {
     width: 100vw;
     margin-bottom: 1.5rem;
@@ -80,10 +68,6 @@ main:hover {
 
 #icon-success {
     margin: 1.7rem 0 1rem 1.4rem;
-}
-
-#thanks {
-    padding: 8rem 0 0 0;
 }
 
 #email-error {
@@ -98,6 +82,8 @@ h1 {
 }
 
 h1 {
+    font-family: 'Roboto Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
     line-height: 2.5rem;
 }
 
@@ -126,11 +112,6 @@ li::before {
     position: absolute;
     left: 0;
     top: 0%;
-}
-
-h1 {
-    font-family: 'Roboto Bold';
-    font-size: 2.5rem;
 }
 
 form {
@@ -165,16 +146,6 @@ input:hover {
     
 }
 
-.invalidMail {
-    color: rgb(219, 111, 109);
-    border: 1px solid rgb(219, 111, 109);
-    background-color: hsla(4, 100%, 67%, 0.163);
-}
-
-.hide {
-    display: none;
-}
-
 button {
     border: none;
     font-size: .9rem;
@@ -200,46 +171,6 @@ button:hover {
         width: 80%;
         max-width: 925px;
         max-height: 640px;
-        /* position: relative; */
-        justify-content: space-between;
-    }
-
-    main#thanks {
-
-        width: 30.2rem;
-        height: 30.2rem;
-        padding: 1rem 1rem 2rem 4rem;
-        border-radius: 2rem;
-
-        h1,
-        section {
-            padding: 0;
-            margin: 0;
-            width: 90%;
-        }
-
-        h1 {
-            font-size: 3.4rem;
-            line-height: 3.5rem;
-        }
-
-        p {
-            font-size: 1rem;
-            margin: 1.2rem 0 1.5rem 0;
-        }
-
-        form {
-            margin: 0;
-
-            button {
-                padding: 1.2rem;
-            }
-        }
-
-        #icon-success {
-            margin: 1.5rem 0 1.8rem 0;
-        }
-
     }
 
     #banner {
@@ -274,27 +205,52 @@ button:hover {
         margin-top: 1.5rem;
     }
 
+    main#submittedMain {
+        width: 30.2rem;
+        height: 30.2rem;
+        padding: 1rem 1rem 2rem 4rem;
+        border-radius: 2rem;
+        h1,
+        section {
+            padding: 0;
+            margin: 0;
+            width: 90%;
+        }
+        h1 {
+            font-size: 3.4rem;
+            line-height: 3.5rem;
+        }
+        p {
+            font-size: 1rem;
+            margin: 1.2rem 0 1.5rem 0;
+        }
+        form {
+            margin: 0;
+            button {
+                padding: 1.2rem;
+            }
+        }
+        #icon-success {
+            margin: 1.5rem 0 1.8rem 0;
+        }
+    }
 }
 
 @media (min-width: 550px) and (max-width: 1160px) {
-
     main {
         width: 24rem;
         padding-right: 2rem;
-        
         #banner {
             width: 24rem;
         }
     }
 
-    main#thanks {
+    main#submittedMain {
         width: 24rem;
-
         h1 {
             margin: 1rem 0 0 1.5rem;
             width: 80%;
         }
-
         #dismiss {
             width: 21rem;
         }
@@ -303,5 +259,4 @@ button:hover {
     form {
         width: 21rem;
     }
-
 }
