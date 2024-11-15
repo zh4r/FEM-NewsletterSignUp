@@ -89,7 +89,8 @@ h1 {
 
 section {
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    /* justify-content: start; */
 }
 
 p {
@@ -114,14 +115,14 @@ li::before {
     top: 0%;
 }
 
-form {
-    position: absolute;
-    bottom: 0;
+form, #dismiss {
+    align-self: center;
+    justify-self: end;
     z-index: 100;
     width: 90%;
     font-weight: 600;
     font-size: .8rem;
-    margin:0 0 2rem 0;
+    margin: 2rem 0 2rem 1.5rem;
 }
 
 input {
@@ -237,8 +238,8 @@ button:hover {
 }
 
 @media (min-width: 375px) and (max-width: 1160px) {
-
     main {
+        min-height: 800px;
         width: 24rem;
         padding-right: 2rem;
 
