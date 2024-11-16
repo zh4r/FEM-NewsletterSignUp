@@ -34,13 +34,11 @@ main {
     margin-top: 0;
     line-height: 1.5rem;
     background-color: white;
+    min-height: 820px;
     height: 100vh;
 
-    /*  */
     max-width: 24rem;
     padding: 0 2rem 0 0;
-    /* min-height: 800px; */
-    /*  */
 
     font-weight: 500;
     border-radius: 1rem;
@@ -201,8 +199,10 @@ button:hover {
     main {
         width: 80%;
         max-width: 925px;
-        height: 600px;
+        min-height: 0px;
+        max-height: 600px;
         border-radius: 2rem;
+        padding: 0;
     }
 
     #banner {
@@ -231,16 +231,16 @@ button:hover {
 
     form {
         display: inline;
-        position: relative;
-        float: center;
+        /* position: relative; */
+        float: left;
         width: 100%;
         margin-top: 1rem;
         margin-left: 0;
     }
 
     main#submittedMain {
-        width: 30.2rem;
-        max-height: 30.2rem;
+        width: 30.5rem;
+        max-height: 30.5rem;
         padding: 1rem 2rem 0 4rem;
         border-radius: 2rem;
 
@@ -273,9 +273,9 @@ button:hover {
             margin: 1.5rem 0 1.8rem 0;
         }
 
-        #dismissBtn {
-            margin-top: 2rem;
-            align-items: center;
+        #dismiss {
+            width: 100%;
+            margin: 2rem 0 3rem 0;
         }
     }
 }
