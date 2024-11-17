@@ -266,7 +266,7 @@ button:hover {
     }
 }
 
-@media (min-height: 820px) {
+@media (min-height: 820px) and (max-width: 1160px) {
     form {
         position: absolute;
         bottom: 0;
